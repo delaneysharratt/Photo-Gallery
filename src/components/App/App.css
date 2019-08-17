@@ -1,12 +1,13 @@
 .App {
-  text-align: center;
+  background-color: white;
 }
 
 .App-header {
   background-color: #222;
-  height: 70px;
-  padding: 20px;
+  height: 10%;
+  padding: 2em;;
   color: white;
+  text-align: center;
 }
 
 .App-title {
@@ -17,7 +18,22 @@
   font-size: large;
 }
 
-@keyframes App-logo-spin {
-  from { transform: rotate(0deg); }
-  to { transform: rotate(360deg); }
+.GalleryDisplay {
+  display: flex;
+  height: 100%;
+  flex-flow: row wrap;
+  width: 100%;
+  margin: 5% 0;
+  justify-content: center;
+  text-align: center;
+}
+
+.GalleryItem {
+  width: 25%;
+  padding: 2rem;
+  font-size: small;
+}
+
+.GalleryItem img {
+  width: 75%;
 }

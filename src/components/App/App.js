@@ -22,12 +22,7 @@ state = {
       .then(response => {
         console.log('GET details', response.data);
         this.setState({
-          gallery: {
-            id: response.data.id,
-            path: response.data.name,
-            description: response.data.description,
-            likes: 0
-          }
+          gallery: response.data
         });
         console.log('Gallery:', this.state.gallery);
       })
@@ -40,10 +35,9 @@ state = {
     return (
       <div className="App">
         <header className="App-header">
-          <h1 className="App-title">A Little Gallery</h1>
+          <h1 className="App-title">These Little Moments</h1>
         </header>
-        <br/>
-        <GalleryList />
+        <GalleryList gallery={this.state.gallery} />
       </div>
     );
   }
