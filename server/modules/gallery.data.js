@@ -23,30 +23,36 @@ const galleryItems = [
     description: 'A typical MN winter relapse in April.',
     likes: 0
   },
-    {
-        id: 5,
-        path: 'images/tybee-people.jpg',
-        description: 'On the streets of Tybee Island, Georgia.',
-        likes: 0
-    },
-    {
-        id: 6,
-        path: 'images/river.jpg',
-        description: 'A snapshot from the PNW.',
-        likes: 0
-    },
+  {
+    id: 5,
+    path: 'images/tybee-people.jpg',
+    description: 'On the streets of Tybee Island, Georgia.',
+    likes: 0
+  },
+  {
+    id: 6,
+    path: 'images/river.jpg',
+    description: 'A snapshot from the PNW.',
+    likes: 0
+  },
   {
     id: 7,
     path: 'images/palouse-falls.jpg',
     description: 'Palouse Falls, February 2016.',
     likes: 0
   },
-    {
-        id: 8,
-        path: 'images/minnetonka.jpg',
-        description: 'Lake Minnetonka on the Fourth of July, 2016.',
-        likes: 0
-    }
+  {
+    id: 8,
+    path: 'images/minnetonka.jpg',
+    description: 'Lake Minnetonka on the Fourth of July, 2016.',
+    likes: 0
+  },
+  {
+    id: 9,
+    path: 'images/pnw-mtn.jpg',
+    description: 'Mountain in the PNW.',
+    likes: 0
+  }
 ];
 
 module.exports = galleryItems;
