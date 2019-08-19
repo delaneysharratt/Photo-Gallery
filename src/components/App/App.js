@@ -2,8 +2,11 @@ import React, { Component } from 'react';
 import axios from 'axios';
 import Header from '../Header/Header';
 import GalleryList from '../GalleryList/GalleryList';
-import './bootstrap.css';
 import './App.css';
+
+//material-ui imports
+import Container from '@material-ui/core/Container';
+import CssBaseline from '@material-ui/core/CssBaseline';
 
 class App extends Component {
   state = {
@@ -48,8 +51,14 @@ class App extends Component {
   render() {
     return (
       <div className="App">
-        <Header />
-        <GalleryList gallery={this.state.gallery} addLike={this.addLike} />
+        <CssBaseline>
+          <div className="App-header">
+            <Header />
+          </div>
+          <Container>
+            <GalleryList gallery={this.state.gallery} addLike={this.addLike} />
+          </Container>
+        </CssBaseline>
       </div>
     );
   }
