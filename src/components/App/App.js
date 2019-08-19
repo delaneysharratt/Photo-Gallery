@@ -1,6 +1,8 @@
 import React, { Component } from 'react';
 import axios from 'axios';
+import Header from '../Header/Header';
 import GalleryList from '../GalleryList/GalleryList';
+import './bootstrap.css';
 import './App.css';
 
 class App extends Component {
@@ -34,7 +36,7 @@ class App extends Component {
     axios
       .put(`/gallery/like/${id}`)
       .then(response => {
-        console.log('Updated successfully! (PUT)');
+        console.log('Photo liked!');
         this.getGallery();
       })
       .catch(error => {
@@ -42,14 +44,12 @@ class App extends Component {
       });
   };
 
-//rendering app to DOM
+  //rendering app to DOM
   render() {
     return (
       <div className="App">
-        <header className="App-header">
-          <h1 className="App-title">These Little Moments</h1>
-        </header>
-        <GalleryList gallery={this.state.gallery} addLike={this.addLike}/>
+        <Header />
+        <GalleryList gallery={this.state.gallery} addLike={this.addLike} />
       </div>
     );
   }

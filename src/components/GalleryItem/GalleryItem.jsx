@@ -8,7 +8,11 @@ class GalleryItem extends Component {
         <div className="overlay" />
         <img src={this.props.photo.path} alt={this.props.photo.id} />
         <div className="details fadeIn-bottom">
-          <p>{this.props.photo.description}</p>
+          <p>
+            {this.props.photo.description}
+            <br />
+            ({this.props.photo.date})
+          </p>
           <h3>
             <span
               onClick={() => {
