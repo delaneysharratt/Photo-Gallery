@@ -16,10 +16,8 @@ class GalleryList extends Component {
     });
 
     return (
-      <div className="GalleryDisplay">
-        {/* <h2>Memories:</h2> */}
-        {gallery}
-      </div>
+      //flex displayed gallery in grid format
+      <div className="GalleryDisplay">{gallery}</div>
     );
   }
 }

@@ -1,11 +1,10 @@
 import React from 'react';
-import './Header.css';
 
 //material ui imports
 import AppBar from '@material-ui/core/AppBar';
 import Toolbar from '@material-ui/core/Toolbar';
 import Typography from '@material-ui/core/Typography';
-import CssBaseline from '@material-ui/core/CssBaseline';
+import { makeStyles } from '@material-ui/core/styles';
 import useScrollTrigger from '@material-ui/core/useScrollTrigger';
 import Slide from '@material-ui/core/Slide';
 import CameraIcon from '@material-ui/icons/PhotoCamera';
@@ -22,14 +21,24 @@ function HideOnScroll(props) {
   );
 }
 
+const useStyles = makeStyles(theme => ({
+  appBar: {
+    alignItems: 'center'
+  },
+  icon: {
+    margin: '0 1em'
+  }
+}));
+
 export default function HideAppBar(props) {
+  const classes = useStyles();
+
   return (
     <React.Fragment>
-      <CssBaseline />
       <HideOnScroll {...props}>
-        <AppBar>
+        <AppBar className={classes.appBar}>
           <Toolbar>
-            <CameraIcon className="logo"/>
+            <CameraIcon className={classes.icon} />
             <Typography variant="h6">These Little Moments</Typography>
           </Toolbar>
         </AppBar>

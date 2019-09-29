@@ -66,13 +66,19 @@
   margin: 1em 2em;
 }
 
-.details h3 {
+.likeCount {
   color: #fff;
   font-size: 1.75em;
   font-weight: 500;
   letter-spacing: 0.15em;
-  margin-bottom: 0.5em;
   text-transform: uppercase;
+  display: inline-flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.likeBtn {
+  margin-right: 5px;
 }
 
 .likeBtn:hover {
